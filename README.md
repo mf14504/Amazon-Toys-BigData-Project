@@ -9,13 +9,14 @@ This project processes and analyzes 16.2 million Amazon reviews (2023) to predic
 4. **Visualization**: Interactive dashboards created from the processed results.
 
 ## Environment Setup
-This project was developed on **Databricks**. To reproduce the environment:
+This project was developed and executed using **Databricks**. To reproduce the results:
 
-1. **Cluster Configuration**:
-   - Runtime: Databricks Runtime 13.x or higher (includes Apache Spark 3.4.x).
-   - Worker Type: Recommended Standard_DS3_v2 (or equivalent with at least 14GB RAM).
+1. **Spark Cluster**: 
+   - Use a standard Databricks cluster.
+   - Ensure the runtime is a recent version that supports Apache Spark 3.x.
    
-2. **Required Libraries**:
-   Install the following library via PyPI on your cluster:
-   ```text
-   textblob==0.17.1
+2. **Libraries**: 
+   - The only external library required is `textblob`. You can install it on your cluster via PyPI.
+
+3. **Data Access**: 
+   - The notebook is configured to read the Amazon 2023 dataset from the workspace storage.
